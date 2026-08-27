@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Divine Essence | Admin Panel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f5ef;
+            color: #173d2d;
+        }
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+        /* =================================
+           ADMIN LAYOUT
+        ================================= */
+
+        .admin-panel {
+            min-height: 100vh;
+            display: flex;
+        }
+
+
+        /* =================================
+           SIDEBAR
+        ================================= */
+
+        .admin-sidebar {
+            width: 250px;
+            min-height: 100vh;
+            background: #123d30;
+            color: #ffffff;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 100;
+            transition: 0.3s ease;
+        }
+
+        .admin-logo {
+            height: 85px;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .admin-logo-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #f5ecd9;
+            color: #a97821;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+
+        .admin-logo-text strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 17px;
+        }
+
+        .admin-logo-text small {
+            color: #d8b45e;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+        }
+
+
+        /* =================================
+           NAVIGATION
+        ================================= */
+
+        .admin-nav {
+            padding: 25px 15px;
+        }
+
+        .nav-title {
+            color: #8eaa9e;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 0 12px;
+            margin-bottom: 12px;
+        }
+
+        .admin-nav a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 13px;
+            margin-bottom: 5px;
+            border-radius: 7px;
+            color: #c9d8d2;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.25s ease;
+        }
+
+        .admin-nav a:hover,
+        .admin-nav a.active {
+            background: rgba(255,255,255,0.09);
+            color: #ffffff;
+        }
+
+        .admin-nav a.active {
+            border-left: 3px solid #d8b45e;
+        }
+
+        .nav-icon {
+            width: 20px;
+            text-align: center;
+            color: #d8b45e;
+        }
+
+
+        /* =================================
+           MAIN CONTENT
+        ================================= */
+
+        .admin-main {
+            width: calc(100% - 250px);
+            margin-left: 250px;
+            min-height: 100vh;
+        }
+
+
+        /* =================================
+           TOPBAR
+        ================================= */
+
+        .admin-topbar {
+            height: 75px;
+            background: #ffffff;
+            border-bottom: 1px solid #e7e0d2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+
+        .mobile-menu {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 24px;
+            color: #173d2d;
+            cursor: pointer;
+        }
+
+        .topbar-title h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .topbar-title p {
+            color: #89857d;
+            font-size: 11px;
+            margin-top: 3px;
+        }
+
+        .admin-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #f5ecd9;
+            color: #a97821;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .profile-info strong {
+            display: block;
+            font-size: 12px;
+        }
+
+        .profile-info span {
+            display: block;
+            color: #89857d;
+            font-size: 10px;
+        }
+
+
+        /* =================================
+           CONTENT
+        ================================= */
+
+        .admin-content {
+            padding: 30px;
+        }
+
+
+        /* =================================
+           WELCOME
+        ================================= */
+
+        .welcome-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .welcome-section h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            font-weight: 500;
+        }
+
+        .welcome-section p {
+            margin-top: 5px;
+            color: #77736b;
+            font-size: 13px;
+        }
+
+        .date-box {
+            padding: 10px 15px;
+            background: #ffffff;
+            border: 1px solid #e3d9c7;
+            border-radius: 7px;
+            color: #77736b;
+            font-size: 11px;
+        }
+
+
+        /* =================================
+           STAT CARDS
+        ================================= */
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid #e5dccb;
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::after {
+            content: "";
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #f8f0df;
+            position: absolute;
+            right: -20px;
+            top: -20px;
+        }
+
+        .stat-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stat-icon {
+            width: 38px;
+            height: 38px;
+            background: #f7efdf;
+            color: #a97821;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+        }
+
+        .stat-label {
+            color: #77736b;
+            font-size: 11px;
+            margin-top: 15px;
+        }
+
+        .stat-number {
+            font-size: 27px;
+            font-weight: 700;
+            margin-top: 4px;
+            color: #173d2d;
+        }
+
+        .stat-growth {
+            font-size: 10px;
+            color: #398061;
+            margin-top: 5px;
+        }
+
+
+        /* =================================
+           TWO COLUMN
+        ================================= */
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 20px;
+        }
+
+        .dashboard-card {
+            background: #ffffff;
+            border: 1px solid #e5dccb;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 18px 20px;
+            border-bottom: 1px solid #eee8dc;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-header h3 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .view-all {
+            color: #a97821;
+            font-size: 11px;
+            text-decoration: none;
+        }
+
+
+        /* =================================
+           LEADS TABLE
+        ================================= */
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        .leads-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .leads-table th {
+            padding: 12px 20px;
+            text-align: left;
+            color: #8b877e;
+            font-size: 10px;
+            font-weight: 600;
+            background: #fcfbf8;
+        }
+
+        .leads-table td {
+            padding: 14px 20px;
+            border-top: 1px solid #f0ebe2;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        .lead-name {
+            font-weight: 600;
+            color: #173d2d;
+        }
+
+        .lead-phone {
+            color: #77736b;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 9px;
+            border-radius: 20px;
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+        .status-new {
+            color: #80601f;
+            background: #f8edcf;
+        }
+
+        .status-contacted {
+            color: #286b57;
+            background: #e2f2ec;
+        }
+
+        .status-follow {
+            color: #76588c;
+            background: #eee5f5;
+        }
+
+        .status-converted {
+            color: #27704e;
+            background: #dff1e6;
+        }
+
+
+        /* =================================
+           QUICK ACTIONS
+        ================================= */
+
+        .quick-actions {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .quick-action {
+            padding: 16px;
+            border: 1px solid #e8dfcf;
+            border-radius: 9px;
+            text-decoration: none;
+            transition: 0.25s ease;
+        }
+
+        .quick-action:hover {
+            border-color: #c6a259;
+            background: #fffdf8;
+            transform: translateY(-2px);
+        }
+
+        .quick-action-icon {
+            color: #b4832d;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .quick-action strong {
+            display: block;
+            color: #173d2d;
+            font-size: 11px;
+        }
+
+        .quick-action span {
+            color: #89857d;
+            font-size: 9px;
+        }
+
+
+        /* =================================
+           CONSULTATION OVERVIEW
+        ================================= */
+
+        .consultation-list {
+            padding: 8px 20px 18px;
+        }
+
+        .consultation-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 13px 0;
+            border-bottom: 1px solid #eee8dc;
+        }
+
+        .consultation-item:last-child {
+            border-bottom: 0;
+        }
+
+        .consultation-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .consultation-avatar {
+            width: 32px;
+            height: 32px;
+            background: #f7efdf;
+            color: #a97821;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .consultation-name strong {
+            display: block;
+            font-size: 11px;
+        }
+
+        .consultation-name span {
+            color: #89857d;
+            font-size: 9px;
+        }
+
+        .consultation-time {
+            color: #77736b;
+            font-size: 9px;
+        }
+
+
+        /* =================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 1050px) {
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .admin-sidebar {
+                transform: translateX(-100%);
+            }
+
+            .admin-sidebar.open {
+                transform: translateX(0);
+            }
+
+            .admin-main {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .topbar-title {
+                display: none;
+            }
+
+            .admin-content {
+                padding: 20px 15px;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .stat-card {
+                padding: 15px;
+            }
+
+            .stat-number {
+                font-size: 22px;
+            }
+
+            .welcome-section {
+                align-items: flex-start;
+            }
+
+            .welcome-section h2 {
+                font-size: 23px;
+            }
+
+            .date-box {
+                display: none;
+            }
+
+            .admin-profile .profile-info {
+                display: none;
+            }
+
+            .quick-actions {
+                grid-template-columns: 1fr 1fr;
+                padding: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="admin-panel">
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="admin-logo">
+
+            <div class="admin-logo-icon">
+                ✦
+            </div>
+
+            <div class="admin-logo-text">
+
+                <strong>
+                    Divine Essence
+                </strong>
+
+                <small>
+                    VASTU CONSULTANT
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <div class="nav-title">
+                MAIN MENU
+            </div>
+
+
+            <a
+                href="#"
+                class="active"
+            >
+
+                <span class="nav-icon">⌂</span>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="#">
+
+                <span class="nav-icon">♙</span>
+
+                Leads
+
+            </a>
+
+
+            <a href="#">
+
+                <span class="nav-icon">◈</span>
+
+                Consultations
+
+            </a>
+
+
+            <a href="#">
+
+                <span class="nav-icon">✓</span>
+
+                Follow Ups
+
+            </a>
+
+
+            <a href="#">
+
+                <span class="nav-icon">▣</span>
+
+                Contacts
+
+            </a>
+
+
+            <div class="nav-title" style="margin-top:25px;">
+                MANAGEMENT
+            </div>
+
+
+            <a href="#">
+
+                <span class="nav-icon">◫</span>
+
+                Reports
+
+            </a>
+
+
+            <a href="#">
+
+                <span class="nav-icon">⚙</span>
+
+                Settings
+
+            </a>
+
+
+            <a href="#">
+
+                <span class="nav-icon">↪</span>
+
+                Logout
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="admin-topbar">
+
+            <button
+                class="mobile-menu"
+                id="mobileMenu"
+            >
+                ☰
+            </button>
+
+
+            <div class="topbar-title">
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Manage your Vastu consultation business
+                </p>
+
+            </div>
+
+
+            <div class="admin-profile">
+
+                <div class="profile-avatar">
+                    AD
+                </div>
+
+                <div class="profile-info">
+
+                    <strong>
+                        Admin
+                    </strong>
+
+                    <span>
+                        Administrator
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <div class="admin-content">
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome-section">
+
+                <div>
+
+                    <h2>
+                        Good Morning, Admin
+                    </h2>
+
+                    <p>
+                        Here's what's happening with your consultations today.
+                    </p>
+
+                </div>
+
+
+                <div class="date-box">
+
+                    Tuesday, 25 August 2026
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 STATISTICS
+            ================================== -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon">
+                            ♙
+                        </div>
+
+                    </div>
+
+                    <div class="stat-label">
+                        TOTAL LEADS
+                    </div>
+
+                    <div class="stat-number">
+                        248
+                    </div>
+
+                    <div class="stat-growth">
+                        ↑ 12.5% this month
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon">
+                            ✦
+                        </div>
+
+                    </div>
+
+                    <div class="stat-label">
+                        NEW LEADS
+                    </div>
+
+                    <div class="stat-number">
+                        42
+                    </div>
+
+                    <div class="stat-growth">
+                        ↑ 8.4% this week
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon">
+                            ◈
+                        </div>
+
+                    </div>
+
+                    <div class="stat-label">
+                        CONSULTATIONS
+                    </div>
+
+                    <div class="stat-number">
+                        68
+                    </div>
+
+                    <div class="stat-growth">
+                        ↑ 15.2% this month
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon">
+                            ✓
+                        </div>
+
+                    </div>
+
+                    <div class="stat-label">
+                        CONVERTED
+                    </div>
+
+                    <div class="stat-number">
+                        31
+                    </div>
+
+                    <div class="stat-growth">
+                        ↑ 6.8% this month
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================
+                 DASHBOARD GRID
+            ================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- RECENT LEADS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <h3>
+                            Recent Leads
+                        </h3>
+
+                        <a
+                            href="#"
+                            class="view-all"
+                        >
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="leads-table">
+
+                            <thead>
+
+                            <tr>
+
+                                <th>
+                                    NAME
+                                </th>
+
+                                <th>
+                                    PHONE
+                                </th>
+
+                                <th>
+                                    CITY
+                                </th>
+
+                                <th>
+                                    SERVICE
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                            </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                            <tr>
+
+                                <td class="lead-name">
+                                    Rahul Sharma
+                                </td>
+
+                                <td class="lead-phone">
+                                    98765 43210
+                                </td>
+
+                                <td>
+                                    Noida
+                                </td>
+
+                                <td>
+                                    Home Vastu
+                                </td>
+
+                                <td>
+                                    <span class="status status-new">
+                                        New
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td class="lead-name">
+                                    Priya Singh
+                                </td>
+
+                                <td class="lead-phone">
+                                    98123 45678
+                                </td>
+
+                                <td>
+                                    Delhi
+                                </td>
+
+                                <td>
+                                    Office Vastu
+                                </td>
+
+                                <td>
+                                    <span class="status status-contacted">
+                                        Contacted
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td class="lead-name">
+                                    Amit Kumar
+                                </td>
+
+                                <td class="lead-phone">
+                                    99887 65432
+                                </td>
+
+                                <td>
+                                    Gurgaon
+                                </td>
+
+                                <td>
+                                    Property Vastu
+                                </td>
+
+                                <td>
+                                    <span class="status status-follow">
+                                        Follow Up
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td class="lead-name">
+                                    Neha Verma
+                                </td>
+
+                                <td class="lead-phone">
+                                    98711 22334
+                                </td>
+
+                                <td>
+                                    Jaipur
+                                </td>
+
+                                <td>
+                                    Home Vastu
+                                </td>
+
+                                <td>
+                                    <span class="status status-converted">
+                                        Converted
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <h3>
+                            Quick Actions
+                        </h3>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <a href="#" class="quick-action">
+
+                            <div class="quick-action-icon">
+                                +
+                            </div>
+
+                            <strong>
+                                Add Lead
+                            </strong>
+
+                            <span>
+                                Create new lead
+                            </span>
+
+                        </a>
+
+
+                        <a href="#" class="quick-action">
+
+                            <div class="quick-action-icon">
+                                ◈
+                            </div>
+
+                            <strong>
+                                Consultation
+                            </strong>
+
+                            <span>
+                                Schedule consultation
+                            </span>
+
+                        </a>
+
+
+                        <a href="#" class="quick-action">
+
+                            <div class="quick-action-icon">
+                                ✓
+                            </div>
+
+                            <strong>
+                                Follow Up
+                            </strong>
+
+                            <span>
+                                Manage follow-ups
+                            </span>
+
+                        </a>
+
+
+                        <a href="#" class="quick-action">
+
+                            <div class="quick-action-icon">
+                                ▣
+                            </div>
+
+                            <strong>
+                                Reports
+                            </strong>
+
+                            <span>
+                                View analytics
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================
+                 UPCOMING CONSULTATIONS
+            ================================== -->
+
+            <div
+                class="dashboard-card"
+                style="margin-top:20px;"
+            >
+
+                <div class="card-header">
+
+                    <h3>
+                        Upcoming Consultations
+                    </h3>
+
+                    <a
+                        href="#"
+                        class="view-all"
+                    >
+                        View Calendar →
+                    </a>
+
+                </div>
+
+
+                <div class="consultation-list">
+
+
+                    <div class="consultation-item">
+
+                        <div class="consultation-name">
+
+                            <div class="consultation-avatar">
+                                RS
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Rahul Sharma
+                                </strong>
+
+                                <span>
+                                    Home Vastu Consultation
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="consultation-time">
+                            Today · 11:30 AM
+                        </div>
+
+                    </div>
+
+
+                    <div class="consultation-item">
+
+                        <div class="consultation-name">
+
+                            <div class="consultation-avatar">
+                                PS
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Priya Singh
+                                </strong>
+
+                                <span>
+                                    Office Vastu Consultation
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="consultation-time">
+                            Today · 3:00 PM
+                        </div>
+
+                    </div>
+
+
+                    <div class="consultation-item">
+
+                        <div class="consultation-name">
+
+                            <div class="consultation-avatar">
+                                NK
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Neha Kapoor
+                                </strong>
+
+                                <span>
+                                    Property Vastu Consultation
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="consultation-time">
+                            Tomorrow · 10:00 AM
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    const adminSidebar =
+        document.getElementById("adminSidebar");
+
+
+    mobileMenu.addEventListener(
+        "click",
+        function () {
+
+            adminSidebar.classList.toggle("open");
+
+        }
+    );
+
+
+    /*
+     * Close sidebar after clicking
+     * a navigation item on mobile.
+     */
+
+    document
+        .querySelectorAll(".admin-nav a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    if (
+                        window.innerWidth <= 800
+                    ) {
+
+                        adminSidebar.classList.remove(
+                            "open"
+                        );
+
+                    }
+
+                }
+            );
+
+        });
+
+</script>
+
+</body>
+</html>

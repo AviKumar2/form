@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Boxes in One Line</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    padding:40px;
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /*justify-content:space-between;*/
+    gap:20px;
+}
+
+.box{
+    flex:1;
+    background:#ffffff;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    background-image: url("alakh.jpg");
+}
+
+.box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.box h2, h4{
+    color:#22be5e;
+    margin-bottom:15px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.box p{
+    color:rgb(38, 54, 146);
+    font-size:15px;
+}
+
+.design {
+    width:100%;
+    flex-direction: column;
+    gap: 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    }
+.design input{
+    border: 1px solid black;
+    height: 25px;
+    border-radius: 4px;
+}
+.design button{
+    border: 1px solid black;
+    height: 25px;
+    border-radius: 4px;
+    width: 100%;
+    color: red;
+    background-color: dodgerblue;
+}
+/* Responsive */
+@media (max-width:768px){
+    .container{
+        flex-wrap:wrap;
+    }
+
+    .box{
+        flex:0 0 calc(50% - 10px);
+    }
+}
+
+@media (max-width:480px){
+    .box{
+        flex:0 0 100%;
+    }
+}
+</style>
+<body>
+
+<div class="container">
+    <div class="box">
+        <h2>GRAPHIC ERA UNIVERSITY</h2>
+        <h4>Dehradun, Uttrakhand India</h4>
+       <div class="design"> 
+        <input type="text" placeholder="Student Name" required>
+        <input type="text" placeholder="Father Name" required>
+        <input type="phone" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email ID" required>
+        <input type="text" placeholder="Address" required>
+        <a href="#"><button>Sumbit</button></a>
+       </div>
+    </div>
+
+    <div class="box">
+        <h2>COER UNIVERSITY</h2>
+        <h4>Roorkee, Uttrakhand India</h4>
+       <div class="design"> 
+        <input type="text" placeholder="Student Name" required>  
+        <input type="text" placeholder="Father Name" required>
+        <input type="phone" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email ID" required>
+        <input type="text" placeholder="Address" required>
+        <a href="#"><button>Sumbit</button></a>
+       </div>
+    </div>
+
+    <div class="box">
+        <h2> UPES </h2>
+        <h4>Dehradun, Uttrakhand India</h4>
+       <div class="design"> 
+        <input type="text" placeholder="Student Name" required>
+        <input type="text" placeholder="Father Name" required>
+        <input type="phone" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email ID" required>
+        <input type="text" placeholder="Address" required>
+        <a href="#"><button>Sumbit</button></a>
+       </div>
+    </div>
+
+    <div class="box">
+        <h2>RIT Roorkee</h2>
+        <h4>Roorkee, Uttrakhand India</h4>
+       <div class="design"> 
+        <input type="text" placeholder="Student Name" required>
+        <input type="text" placeholder="Father Name" required>
+        <input type="phone" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email ID" required>
+        <input type="text" placeholder="Address" required>
+        <a href="#"><button>Sumbit</button></a>
+       </div>
+    </div>
+
+    
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | VastuShakti</title>
+    <link rel="stylesheet" href="about.css">
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#faf8f2;
+    color:#333;
+}
+
+.hero{
+    height:50vh;
+    background:url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1600") center/cover;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    text-align:center;
+}
+
+.overlay h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.overlay p{
+    font-size:20px;
+}
+
+.about{
+    padding:80px 8%;
+}
+
+.container{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.about-image img{
+    width:450px;
+    border-radius:15px;
+}
+
+.about-content{
+    flex:1;
+}
+
+.about-content h2{
+    color:#8B5E00;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+.about-content p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.vision{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding:80px 8%;
+    background:#fff;
+}
+
+.box{
+    background:#fff8e6;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.box h3{
+    color:#8B5E00;
+    margin-bottom:15px;
+}
+
+.why{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.why h2{
+    font-size:40px;
+    color:#8B5E00;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 12px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.consultant{
+    padding:80px 8%;
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+    background:#fff;
+}
+
+.consultant img{
+    width:300px;
+    border-radius:50%;
+}
+
+.text{
+    flex:1;
+}
+
+.text h2{
+    color:#8B5E00;
+    margin-bottom:20px;
+    font-size:36px;
+}
+
+.text p{
+    line-height:1.8;
+}
+
+.stats{
+    padding:70px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+    text-align:center;
+}
+
+.stat{
+    background:#FFD700;
+    padding:30px;
+    border-radius:12px;
+}
+
+.stat h2{
+    font-size:40px;
+}
+
+.cta{
+    padding:80px 8%;
+    text-align:center;
+    background:#8B5E00;
+    color:#fff;
+}
+
+.cta h2{
+    font-size:40px;
+}
+
+.cta p{
+    margin:20px 0;
+}
+
+.cta a{
+    display:inline-block;
+    text-decoration:none;
+    background:#FFD700;
+    color:#000;
+    padding:15px 35px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero{
+    height:40vh;
+}
+
+.overlay h1{
+    font-size:38px;
+}
+
+.about-image img{
+    width:100%;
+}
+
+.consultant{
+    text-align:center;
+    justify-content:center;
+}
+
+.consultant img{
+    width:220px;
+}
+
+}
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="hero">
+    <div class="overlay">
+        <h1>About Us</h1>
+        <p>Creating Harmony Through Authentic Vastu Shastra</p>
+    </div>
+</header>
+
+<!-- About Section -->
+<section class="about">
+    <div class="container">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700" alt="Vastu Home">
+        </div>
+
+        <div class="about-content">
+            <h2>Who We Are</h2>
+            <p>
+                VastuShakti is a trusted Vastu consultancy dedicated to helping
+                families and businesses create spaces filled with positive
+                energy, prosperity, and happiness. Our expert guidance is based
+                on traditional Vastu principles combined with practical modern
+                solutions.
+            </p>
+
+            <p>
+                We have successfully guided hundreds of homeowners, office
+                owners, builders, and industries in improving their environments
+                for better health, peace, and financial growth.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="vision">
+
+    <div class="box">
+        <h3>🌞 Our Vision</h3>
+        <p>
+            To create balanced and positive living environments for every family
+            through the ancient science of Vastu.
+        </p>
+    </div>
+
+    <div class="box">
+        <h3>🎯 Our Mission</h3>
+        <p>
+            Deliver practical, affordable, and result-oriented Vastu solutions
+            while maintaining authenticity and customer satisfaction.
+        </p>
+    </div>
+
+</section>
+
+<!-- Why Choose Us -->
+<section class="why">
+
+    <h2>Why Choose Us?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>✔ Experienced Consultant</h3>
+            <p>Over 10 years of practical Vastu consulting experience.</p>
+        </div>
+
+        <div class="card">
+            <h3>✔ Scientific Approach</h3>
+            <p>Solutions that blend traditional knowledge with modern lifestyles.</p>
+        </div>
+
+        <div class="card">
+            <h3>✔ Personalized Guidance</h3>
+            <p>Every recommendation is tailored to your property and goals.</p>
+        </div>
+
+        <div class="card">
+            <h3>✔ Online Consultation</h3>
+            <p>Expert advice available from anywhere in the world.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Consultant -->
+<section class="consultant">
+
+    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43?w=400" alt="Consultant">
+
+    <div class="text">
+
+        <h2>Meet Our Consultant</h2>
+
+        <p>
+            Our certified Vastu expert has helped hundreds of clients transform
+            homes, offices, and commercial properties using proven Vastu
+            techniques that promote harmony and success.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Statistics -->
+<section class="stats">
+
+    <div class="stat">
+        <h2>500+</h2>
+        <p>Projects Completed</p>
+    </div>
+
+    <div class="stat">
+        <h2>10+</h2>
+        <p>Years Experience</p>
+    </div>
+
+    <div class="stat">
+        <h2>300+</h2>
+        <p>Happy Families</p>
+    </div>
+
+    <div class="stat">
+        <h2>100%</h2>
+        <p>Client Satisfaction</p>
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>Let's Create Positive Energy Together</h2>
+
+    <p>
+        Book your personalized Vastu consultation today.
+    </p>
+
+    <a href="contact.html">Book Consultation</a>
+
+</section>
+
+<!-- Footer -->
+<footer>
+
+    <p>© 2026 VastuShakti. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

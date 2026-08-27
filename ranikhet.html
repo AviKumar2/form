@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Hospitalities</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /*==========================
+        Google Font
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#ffffff;
+}
+
+/*==========================
+      Top Header
+==========================*/
+
+.top-header{
+
+    width:100%;
+    height:42px;
+
+    background:#2d2b8c;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.top-header p{
+
+    color:#fff;
+    font-size:16px;
+    font-weight:400;
+    letter-spacing:.3px;
+
+}
+
+/*==========================
+        Navbar
+==========================*/
+
+header{
+
+    width:100%;
+    background:#fff;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.05);
+
+}
+
+.container{
+
+    max-width:1320px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 35px;
+
+}
+
+/*==========================
+          Logo
+==========================*/
+
+.logo img{
+
+    width:170px;
+    display:block;
+
+}
+
+/*==========================
+       Navigation
+==========================*/
+
+.nav-menu{
+
+    display:flex;
+    align-items:center;
+    list-style:none;
+    gap:28px;
+
+}
+
+.nav-menu li{
+
+    position:relative;
+
+}
+
+.nav-menu li a{
+
+    text-decoration:none;
+
+    color:#222;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    transition:.35s;
+
+}
+
+/* Underline Animation */
+
+.nav-menu li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#2d2b8c;
+
+    transition:.35s;
+
+}
+
+.nav-menu li:hover a{
+
+    color:#2d2b8c;
+
+}
+
+.nav-menu li:hover a::after{
+
+    width:100%;
+
+}
+
+.nav-menu i{
+
+    font-size:11px;
+
+    transition:.3s;
+
+}
+
+.nav-menu li:hover i{
+
+    transform:rotate(180deg);
+
+}
+
+/*==========================
+      Contact Button
+==========================*/
+
+.contact-btn a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#2d2b8c;
+
+    color:#fff;
+
+    padding:14px 34px;
+
+    border-radius:6px;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+.contact-btn a:hover{
+
+    background:#1d1c6b;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(45,43,140,.25);
+
+}
+
+/*==========================
+      Smooth Transition
+==========================*/
+
+a,
+button{
+
+    transition:.3s ease;
+
+}
+
+/*  About */
+
+.about-container{
+    width:95%;
+    max-width:1280px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-area h2{
+    font-family:'Poppins', sans-serif;
+    font-size:58px;
+    color:#5d5147;
+    font-weight:600;
+    margin-bottom:18px;
+    margin-top: 20px;
+}
+
+.about-area p{
+    max-width:1260px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.6;
+    color:#545454;
+    font-family:'Poppins', sans-serif;
+    margin-bottom: 40px;
+    
+}
+
+.popular-attractions{
+
+    padding:70px 20px;
+    background:#eef4f5;
+
+}
+
+.about-container{
+
+    max-width:880px;
+    margin:auto;
+
+}
+
+.section-title{
+
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    color:#2b2f98;
+    margin-bottom:60px;
+
+}
+
+.attraction-row{
+
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+.attraction-item{
+
+    width:31%;
+    text-align:center;
+
+}
+
+.attraction-item img{
+
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:6px;
+
+}
+
+.attraction-item h3{
+
+    margin-top:20px;
+    font-family:'Poppins',sans-serif;
+    font-size:28px;
+    color:#5a524b;
+    font-weight:500;
+
+}
+
+@media(max-width:991px){
+
+.attraction-item{
+
+width:48%;
+
+}
+
+}
+
+@media(max-width:767px){
+
+.attraction-item{
+
+width:100%;
+
+}
+
+.section-title{
+
+font-size:36px;
+
+}
+
+}
+
+/*=========================
+ Hotel Section
+=========================*/
+
+.hotel-section{
+
+    padding:70px 20px;
+    background:#ffffff;
+
+}
+
+.hotel-container{
+
+    max-width:1280px;
+    margin:auto;
+
+}
+
+.hotel-section h2{
+
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    color:#2c3192;
+    margin-bottom:8px;
+
+}
+
+.hotel-subtitle{
+
+    text-align:center;
+    font-size:18px;
+    color:#555;
+    font-weight:500;
+    letter-spacing:.5px;
+    margin-bottom:50px;
+
+}
+
+.hotel-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    width: 1000px;
+    margin-left: 150px;
+
+}
+
+.hotel-card{
+
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+    transition:.4s;
+
+}
+
+.hotel-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.hotel-card img{
+
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+
+}
+
+.hotel-content{
+
+    padding:22px;
+    text-align:center;
+    background:#fff;
+
+}
+
+.hotel-content h3{
+
+    font-size:18px;
+    color:#2c3192;
+    font-weight:600;
+
+}
+
+/* Tablet */
+
+@media(max-width:991px){
+
+.hotel-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hotel-card img{
+
+height:320px;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:767px){
+
+.hotel-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hotel-section h2{
+
+font-size:38px;
+
+}
+
+.hotel-card img{
+
+height:260px;
+
+}
+
+}
+
+/*==========================
+        FAQ
+==========================*/
+
+.faq-section{
+
+    background:#eef4f5;
+    padding:80px 20px;
+
+}
+
+.faq-container{
+
+    max-width:1100px;
+    margin:auto;
+
+}
+
+.faq-container h2{
+
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    color:#2d2f9a;
+    margin-bottom:50px;
+
+}
+
+.faq-item{
+
+    border-bottom:1px solid #d8d8d8;
+
+}
+
+.faq-question{
+
+    width:100%;
+    background:none;
+    border:none;
+    padding:22px 15px;
+    font-size:18px;
+    color:#555;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    font-weight:500;
+
+}
+
+.faq-question span{
+
+    transition:.3s;
+    font-size:16px;
+
+}
+
+.faq-answer{
+
+    display:none;
+    padding:0 15px 20px;
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
+
+}
+
+.faq-item.active .faq-answer{
+
+    display:block;
+
+}
+
+.faq-item.active span{
+
+    transform:rotate(180deg);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.faq-container h2{
+
+font-size:38px;
+
+}
+
+.faq-question{
+
+font-size:16px;
+padding:18px 10px;
+
+}
+
+.faq-answer{
+
+font-size:15px;
+
+}
+
+}
+
+/*============================
+        Footer
+=============================*/
+
+.footer{
+
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+
+}
+
+.footer-top{
+
+    background:#4b78a3;
+    padding:35px 0;
+
+}
+
+.footer-bottom{
+
+    background:#336a9d;
+    padding:45px 0;
+
+}
+
+.footer-container{
+
+    width:90%;
+    max-width:1280px;
+    margin:auto;
+
+}
+
+.footer-top .footer-container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.footer-logo img{
+
+    width:220px;
+
+}
+
+.footer-social{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.footer-social span{
+
+    font-size:16px;
+    font-weight:600;
+
+}
+
+.footer-social a{
+
+    width:38px;
+    height:38px;
+    border:1px solid #fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.footer-social a:hover{
+
+    background:#fff;
+    color:#336a9d;
+
+}
+
+.footer-grid{
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+    gap:40px;
+
+}
+
+.footer-column h3{
+
+    font-size:22px;
+    margin-bottom:25px;
+    font-weight:600;
+
+}
+
+.footer-column ul{
+
+    list-style:none;
+
+}
+
+.footer-column ul li{
+
+    margin-bottom:15px;
+
+}
+
+.footer-column ul li a{
+
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.footer-column ul li a:hover{
+
+    padding-left:8px;
+
+}
+
+.contact-item{
+
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+
+}
+
+.contact-item i{
+
+    width:42px;
+    height:42px;
+    background:#ff6b4a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+
+}
+
+.contact-item p{
+
+    line-height:1.8;
+    font-size:16px;
+
+}
+
+/*============================
+      Responsive
+=============================*/
+
+@media(max-width:991px){
+
+.footer-top .footer-container{
+
+flex-direction:column;
+gap:25px;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-social{
+
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.footer-logo{
+
+text-align:center;
+
+}
+
+}
+    </style>
+</head>
+<body>
+
+    <!-- ================= Top Header ================= -->
+
+    <div class="top-header">
+        <p>Char Dham Yatra Registration 2026 - Now Open</p>
+    </div>
+
+    <!-- ================= Navbar ================= -->
+
+    <header>
+
+        <div class="container">
+
+            <!-- Logo -->
+
+            <div class="logo">
+
+                <a href="#">
+                    <img src="https://diamondhospitalities.com/img/Diamond-Hospitalities-Logo-1.webp" alt="Diamond Hospitalities">
+                </a>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <nav>
+
+                <ul class="nav-menu">
+
+                    <li><a href="#">Our Story</a></li>
+
+                    <li>
+                        <a href="#">
+                            Destinations
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Packages
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Hotels
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Helicopter Services
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+
+                    <li><a href="#">MICE</a></li>
+
+                    <li><a href="#">Car Rentals</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Contact Button -->
+
+            <div class="contact-btn">
+
+                <a href="#">Contact Us</a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="about-area">
+
+    <div class="about-container">
+
+        <h2>Ranikhet</h2>
+
+        <p>
+            Ranikhet situated in the Kumaon region of Uttarakhand, is a serene hill station that lives up to its name, which means “Queen’s Meadow.” With its lush green landscapes, majestic Himalayan views, and tranquil ambiance, Ranikhet has rightfully earned its reputation as a serene and romantic retreat.
+        </p>
+
+    </div>
+
+</section>
+
+<!--POPULAIOR ATTRACTION-->
+
+<section class="popular-attractions">
+
+    <div class="about-container">
+
+        <h2 class="section-title">
+            Popular attractions in Ranikhet
+        </h2>
+
+        <div class="attraction-row">
+
+            <div class="attraction-item">
+
+                <img src="" alt="Vasudhara Falls">
+
+                <h3>Panoramic Himalayan Views</h3>
+
+            </div>
+
+            <div class="attraction-item">
+
+                <img src="Ne.jpg" alt="Neelkanth Peak">
+
+                <h3>Jhula Devi Temple</h3>
+
+            </div>
+
+            <div class="attraction-item">
+
+                <img src="Ne.jpg" alt="Neelkanth Peak">
+
+                <h3>Historical Charm</h3>
+
+            </div>
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--HOTEL-->
+
+<section class="hotel-section">
+
+    <div class="hotel-container">
+
+        <h2>Hotel in Ranikhet</h2>
+
+        <p class="hotel-subtitle">
+            WE PROVIDE YOU BEST STAY
+        </p>
+
+        <div class="hotel-grid">
+
+            <div class="hotel-card">
+
+                <img src="images/hotel-lords-centric.jpg" alt="Hotel Lords Centric">
+
+                <div class="hotel-content">
+                    <h3>Hotel Chevron Rosemount</h3>
+                </div>
+
+            </div>
+
+            <div class="hotel-card">
+
+                <img src="images/new-yoga.jpg" alt="New Yoga Badrinath">
+
+                <div class="hotel-content">
+                    <h3>Nanital Kausani Ranikhet</h3>
+                </div>
+
+            </div>
+
+            <div class="hotel-card">
+
+                <img src="images/shri-kuber.jpg" alt="Shri Kuber Regency">
+
+                <div class="hotel-content">
+                    <h3>FairField Marriott</h3>
+                </div>
+
+            </div>
+
+            <!--4-->
+
+            <div class="hotel-card">
+
+                <img src="images/hotel-lords-centric.jpg" alt="Hotel Lords Centric">
+
+                <div class="hotel-content">
+                    <h3>Hyatt Regency</h3>
+                </div>
+
+            </div>
+
+        
+        </div>
+
+    </div>
+
+</section>
+
+<!--FAQ-->
+
+<section class="faq-section">
+
+    <div class="faq-container">
+
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq-item active">
+
+            <button class="faq-question">
+                What is the best time to visit Ranikhet?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    The best time to visit Ranikhet is from March to June and September to November,
+                    when the weather is pleasant for sightseeing and outdoor activities.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                How can I reach Ranikhet from major cities in India?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Ranikhet is well connected by air, rail, and road from Delhi,
+                    Mumbai, Kolkata, and other major cities.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Are there adventure activities available in Ranikhet?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Yes, you can enjoy trekking, camping, river rafting, paragliding,
+                    and wildlife experiences around Ranikhet.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                What are the popular tourist attractions in Ranikhet?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Robber's Cave, Sahastradhara, Forest Research Institute,
+                    Tapkeshwar Temple, and Mindrolling Monastery are among the top attractions.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                What is the weather like in Ranikhet during the winter months?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Winters are cool with temperatures ranging from 5°C to 20°C,
+                    making it an excellent season for travel.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--FOOTER-->
+
+<footer class="footer">
+
+    <!-- Top Footer -->
+
+    <div class="footer-top">
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+
+                <img src="https://diamondhospitalities.com/img/whitelogo.png" alt="Diamond Hospitalities">
+
+            </div>
+
+            <div class="footer-social">
+
+                <span>FOLLOW US ON :</span>
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-container footer-grid">
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>CONTACT US</h3>
+
+                <div class="contact-item">
+
+                    <i class="fas fa-map-marker-alt"></i>
+
+                    <p>
+                        Shop 10, Near Ramlila Ground, Haridwar
+                        (Uttarakhand), PIN - 249401
+                    </p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <p>
+                        tours@diamondhospitalities.com<br>
+                        abhishek@diamondhospitalities.com
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Services -->
+
+            <div class="footer-column">
+
+                <h3>OUR SERVICES</h3>
+
+                <ul>
+
+                    <li><a href="#">Chardham By Helicopter</a></li>
+                    <li><a href="#">Adventure Tours</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Car Rentals</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>QUICK LINKS</h3>
+
+                <ul>
+
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Packages</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Web Story</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Packages -->
+
+            <div class="footer-column">
+
+                <h3>POPULAR PACKAGES</h3>
+
+                <ul>
+
+                    <li><a href="#">Char Dham Yatra By Helicopter</a></li>
+                    <li><a href="#">Do Dham Yatra By Helicopter</a></li>
+                    <li><a href="#">Do Dham Yatra By Helicopter (Same Day)</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Divine Essence, our approach to Vastu, cosmic timings, consultations and practical spiritual guidance.">
+  <title>About Us | Divine Essence</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Playfair+Display:wght@700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-brand: 'Montserrat', sans-serif;
+
+      --green-deep: #0b4735;
+      --green-dark: #06312a;
+      --green-brand: #0b3b2c;
+      --green-primary: #00965e;
+      --green-emerald: #059669;
+      --green-soft: #a7f3d0;
+
+      --gold: #e5c178;
+      --gold-dark: #8b6f35;
+
+      --cream: #fbf9f5;
+      --cream-light: #f9f6f0;
+      --green-light: #f5f7ed;
+      --page-bg: #fafbfc;
+
+      --text-dark: #0f172a;
+      --text-heading: #0b4735;
+      --text-body: #4b5563;
+      --text-muted: #475569;
+
+      --red: #dc2626;
+      --orange: #d97706;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-card: 18px;
+      --radius-lg: 24px;
+      --radius-xl: 28px;
+      --radius-pill: 50px;
+
+      --container: 1200px;
+      --container-wide: 1350px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      width: 100%;
+      overflow-x: hidden;
+      font-family: var(--font-body);
+      color: var(--text-body);
+      background: var(--page-bg);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .top-accent {
+      height: 4px;
+      background: linear-gradient(90deg, #0b4735 0%, #15803d 50%, #e5c178 100%);
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--cream);
+      border-bottom: 1px solid #e8e0d5;
+      box-shadow: 0 4px 15px rgba(11, 71, 53, 0.08);
+    }
+
+    .nav-wrap {
+      max-width: var(--container-wide);
+      min-height: 66px;
+      margin: auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 190px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--gold-dark);
+      background: #fffdf8;
+      font-size: 18px;
+      box-shadow: 0 3px 10px rgba(11, 71, 53, 0.08);
+    }
+
+    .brand-name {
+      font-family: var(--font-brand);
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--green-deep);
+      letter-spacing: .4px;
+      line-height: 1.05;
+    }
+
+    .brand-tag {
+      margin-top: 3px;
+      font-size: .62rem;
+      font-weight: 700;
+      color: #665f55;
+      letter-spacing: .25px;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.35rem;
+      flex: 1;
+    }
+
+    .desktop-nav a {
+      position: relative;
+      color: var(--green-deep);
+      font-size: .76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .45px;
+      white-space: nowrap;
+      transition: .25s ease;
+    }
+
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+      color: var(--orange);
+    }
+
+    .desktop-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--gold);
+    }
+
+    .header-cta,
+    .primary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: var(--radius-pill);
+      background: var(--green-primary);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 4px 14px rgba(0, 150, 94, .35);
+      transition: .25s ease;
+      cursor: pointer;
+    }
+
+    .header-cta {
+      padding: 10px 19px;
+      font-size: .78rem;
+      white-space: nowrap;
+    }
+
+    .primary-btn {
+      padding: 13px 26px;
+      font-size: .92rem;
+    }
+
+    .header-cta:hover,
+    .primary-btn:hover {
+      background: #007d4b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 150, 94, .45);
+    }
+
+    .nav-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid #e8e0d5;
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 19px;
+      height: 2px;
+      background: var(--green-deep);
+      border-radius: 5px;
+    }
+
+    /* =========================
+       COMMON
+    ========================== */
+    .container {
+      width: min(100% - 40px, var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 70px 20px;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--gold-dark);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      color: var(--text-heading);
+      font-family: var(--font-heading);
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.3rem);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+    }
+
+    h3 {
+      font-size: 1.35rem;
+    }
+
+    .section-head p {
+      margin: 13px auto 0;
+      max-width: 680px;
+      color: var(--text-body);
+      font-size: .98rem;
+    }
+
+    /* =========================
+       ABOUT HERO
+    ========================== */
+    .about-hero {
+      position: relative;
+      min-height: 470px;
+      padding: 72px 20px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 78% 35%, rgba(229,193,120,.24), transparent 22%),
+        linear-gradient(120deg, #f9f6e9 0%, #e8efdc 52%, #f8f1dd 100%);
+    }
+
+    .about-hero::before,
+    .about-hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(139,111,53,.20);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .about-hero::before {
+      width: 430px;
+      height: 430px;
+      right: -130px;
+      top: -120px;
+    }
+
+    .about-hero::after {
+      width: 260px;
+      height: 260px;
+      right: 25px;
+      top: -30px;
+      border-style: dashed;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: var(--container);
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 7px 14px;
+      border-radius: 50px;
+      border: 1.5px solid var(--green-soft);
+      background: rgba(255,255,255,.72);
+      color: var(--green-deep);
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green-primary);
+      box-shadow: 0 0 0 5px rgba(0,150,94,.10);
+    }
+
+    .hero-copy h1 span {
+      color: var(--gold-dark);
+    }
+
+    .hero-copy p {
+      max-width: 610px;
+      margin: 18px 0 25px;
+      color: #4a5568;
+      font-size: 1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .gold-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 23px;
+      border-radius: 50px;
+      background: var(--gold);
+      color: var(--green-deep);
+      font-size: .9rem;
+      font-weight: 900;
+      box-shadow: 0 5px 15px rgba(139,111,53,.18);
+      transition: .25s ease;
+    }
+
+    .gold-btn:hover {
+      transform: translateY(-2px);
+      background: #d8b15f;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 340px;
+      display: grid;
+      place-items: center;
+    }
+
+    .orbit {
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      border: 1px solid rgba(11,71,53,.18);
+      border-radius: 50%;
+    }
+
+    .orbit::before,
+    .orbit::after {
+      content: "";
+      position: absolute;
+      inset: 25px;
+      border: 1px dashed rgba(139,111,53,.28);
+      border-radius: 50%;
+    }
+
+    .orbit::after {
+      inset: 72px;
+      border: 2px solid rgba(229,193,120,.38);
+    }
+
+    .energy-card {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 350px);
+      padding: 28px;
+      border: 2px solid var(--gold);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(11,71,53,.98), rgba(6,49,42,.96));
+      color: #fff;
+      box-shadow: 0 18px 38px rgba(11,71,53,.24);
+      text-align: center;
+    }
+
+    .energy-icon {
+      width: 94px;
+      height: 94px;
+      margin: 0 auto 16px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid rgba(229,193,120,.65);
+      box-shadow: inset 0 0 0 10px rgba(229,193,120,.06);
+      color: var(--gold);
+      font-size: 36px;
+    }
+
+    .energy-card h3 {
+      color: #fff;
+      font-size: 1.45rem;
+    }
+
+    .energy-card p {
+      margin: 8px 0 0;
+      color: rgba(255,255,255,.78);
+      font-size: .84rem;
+    }
+
+    /* =========================
+       STORY
+    ========================== */
+    .story-section {
+      background: var(--page-bg);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .story-image {
+      position: relative;
+      min-height: 440px;
+      border-radius: 28px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(11,71,53,.15), rgba(229,193,120,.20)),
+        #e7eadb;
+      box-shadow: 0 15px 35px rgba(40,53,31,.10);
+    }
+
+    .story-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      object-fit: cover;
+    }
+
+    .story-image::after {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 20px;
+      pointer-events: none;
+    }
+
+    .story-content .eyebrow {
+      margin-bottom: 7px;
+    }
+
+    .story-content h2 {
+      margin-bottom: 17px;
+    }
+
+    .story-content p {
+      margin: 0 0 14px;
+      font-size: .96rem;
+      color: var(--text-body);
+    }
+
+    .story-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .story-point {
+      padding: 15px;
+      border: 1px solid #e6e0d3;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 8px 25px rgba(40,53,31,.06);
+    }
+
+    .story-point strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--green-deep);
+      font-size: .88rem;
+    }
+
+    .story-point span {
+      color: var(--text-body);
+      font-size: .78rem;
+    }
+
+    /* =========================
+       MISSION / VISION
+    ========================== */
+    .mission-section {
+      background: var(--cream-light);
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .mission-card {
+      position: relative;
+      padding: 30px 25px;
+      border: 1px solid #e6e0d3;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 8px 25px rgba(40,53,31,.07);
+      transition: .3s ease;
+      overflow: hidden;
+    }
+
+    .mission-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .mission-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green-deep), var(--green-primary), var(--gold));
+    }
+
+    .mission-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 17px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      color: var(--red);
+      font-size: 20px;
+    }
+
+    .mission-card p {
+      margin: 10px 0 0;
+      font-size: .88rem;
+    }
+
+    /* =========================
+       APPROACH
+    ========================== */
+    .approach-section {
+      background:
+        radial-gradient(circle at 50% 0%, #fef2f2 0%, #fafbfc 70%);
+    }
+
+    .approach-wrap {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .approach-intro {
+      padding: 32px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #0b4735 0%, #06312a 100%);
+      border: 2px solid var(--gold);
+      box-shadow: 0 15px 35px rgba(11,71,53,.22);
+      color: #fff;
+    }
+
+    .approach-intro .eyebrow {
+      color: var(--gold);
+    }
+
+    .approach-intro h2 {
+      color: #fff;
+      font-size: 2.1rem;
+    }
+
+    .approach-intro p {
+      color: rgba(255,255,255,.78);
+      font-size: .88rem;
+      margin: 15px 0 22px;
+    }
+
+    .approach-badge {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 50px;
+      background: rgba(229,193,120,.12);
+      border: 1px solid rgba(229,193,120,.35);
+      color: var(--gold);
+      font-size: .72rem;
+      font-weight: 800;
+    }
+
+    .steps {
+      display: grid;
+      gap: 13px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 17px;
+      background: #fff;
+      border: 1.5px solid var(--green-soft);
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.025);
+      transition: .3s ease;
+    }
+
+    .step:hover {
+      transform: translateX(5px);
+    }
+
+    .step-number {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--green-deep);
+      color: var(--gold);
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 900;
+    }
+
+    .step h3 {
+      font-family: var(--font-body);
+      font-size: .98rem;
+      font-weight: 900;
+      color: var(--green-deep);
+    }
+
+    .step p {
+      margin: 3px 0 0;
+      font-size: .78rem;
+    }
+
+    /* =========================
+       EXPERT
+    ========================== */
+    .expert-section {
+      background: var(--green-light);
+    }
+
+    .expert-card {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 35px;
+      padding: 28px;
+      border: 2px solid var(--green-emerald);
+      border-radius: 24px;
+      background: rgba(220,245,233,.85);
+      box-shadow: 0 15px 35px rgba(5,150,105,.10);
+      backdrop-filter: blur(10px);
+      align-items: center;
+    }
+
+    .expert-photo {
+      min-height: 330px;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #d9e4d8;
+    }
+
+    .expert-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 330px;
+      object-fit: cover;
+    }
+
+    .expert-content .eyebrow {
+      margin-bottom: 6px;
+    }
+
+    .expert-content h2 {
+      margin-bottom: 12px;
+    }
+
+    .expert-content p {
+      margin: 0 0 12px;
+      font-size: .9rem;
+    }
+
+    .expert-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+      margin: 20px 0 23px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .expert-list li {
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--green-deep);
+      font-size: .75rem;
+      font-weight: 800;
+      border: 1px solid #d9eadf;
+    }
+
+    .expert-list li::before {
+      content: "✓";
+      margin-right: 7px;
+      color: var(--green-primary);
+      font-weight: 900;
+    }
+
+    /* =========================
+       WHY CHOOSE US
+    ========================== */
+    .why-section {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(229,193,120,.10), transparent 20%),
+        radial-gradient(circle at 80% 80%, rgba(0,150,94,.12), transparent 20%),
+        linear-gradient(135deg, #0b4735 0%, #06312a 100%);
+      color: #fff;
+    }
+
+    .why-section::before {
+      content: "✦  ✧  ✦  ✧  ✦  ✧  ✦";
+      position: absolute;
+      top: 17px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: rgba(229,193,120,.22);
+      font-size: 30px;
+      letter-spacing: 28px;
+      pointer-events: none;
+    }
+
+    .why-section .eyebrow {
+      color: var(--gold);
+    }
+
+    .why-section h2 {
+      color: #fff;
+    }
+
+    .why-section .section-head p {
+      color: rgba(255,255,255,.72);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .why-card {
+      padding: 25px 16px;
+      text-align: center;
+      border: 1px solid rgba(229,193,120,.28);
+      border-radius: 18px;
+      background: rgba(255,255,255,.045);
+      transition: .3s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,.075);
+      border-color: rgba(229,193,120,.55);
+    }
+
+    .why-icon {
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 14px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid rgba(229,193,120,.48);
+      color: var(--gold);
+      font-size: 21px;
+    }
+
+    .why-card h3 {
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: .9rem;
+      font-weight: 900;
+    }
+
+    .why-card p {
+      margin: 7px 0 0;
+      color: rgba(255,255,255,.65);
+      font-size: .72rem;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+    .final-cta {
+      padding: 70px 20px;
+      background: var(--cream-light);
+    }
+
+    .cta-box {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      padding: 45px 35px;
+      overflow: hidden;
+      border-radius: 28px;
+      border: 2px solid var(--gold);
+      background: linear-gradient(135deg, #0b4735 0%, #06312a 100%);
+      box-shadow: 0 15px 35px rgba(11,71,53,.22);
+      text-align: center;
+    }
+
+    .cta-box::before,
+    .cta-box::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(229,193,120,.22);
+      border-radius: 50%;
+    }
+
+    .cta-box::before {
+      width: 210px;
+      height: 210px;
+      left: -110px;
+      top: -95px;
+    }
+
+    .cta-box::after {
+      width: 260px;
+      height: 260px;
+      right: -130px;
+      bottom: -130px;
+    }
+
+    .cta-box > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-box .eyebrow {
+      color: var(--gold);
+    }
+
+    .cta-box h2 {
+      color: #fff;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .cta-box p {
+      max-width: 650px;
+      margin: 12px auto 24px;
+      color: rgba(255,255,255,.76);
+      font-size: .9rem;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+    footer {
+      background: #202020;
+      color: #fff;
+    }
+
+    .newsletter {
+      padding: 36px 20px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .newsletter-inner {
+      max-width: var(--container);
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .newsletter h2 {
+      color: #fff;
+      font-size: 1.45rem;
+    }
+
+    .newsletter p {
+      margin: 6px 0 0;
+      color: rgba(255,255,255,.65);
+      font-size: .76rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      background: #292929;
+      border: 1px solid #3c3c3c;
+      overflow: hidden;
+    }
+
+    .newsletter-form input {
+      min-width: 0;
+      flex: 1;
+      border: 0;
+      outline: 0;
+      padding: 13px 14px;
+      background: transparent;
+      color: #fff;
+      font-size: .78rem;
+    }
+
+    .newsletter-form button {
+      border: 0;
+      padding: 0 25px;
+      background: #d2a54f;
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .footer-main {
+      max-width: var(--container);
+      margin: auto;
+      padding: 42px 20px 30px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr 1fr;
+      gap: 45px;
+    }
+
+    .footer-brand .brand {
+      margin-bottom: 18px;
+    }
+
+    .footer-brand .brand-name {
+      color: #fff;
+    }
+
+    .footer-brand p,
+    .footer-col p {
+      color: rgba(255,255,255,.60);
+      font-size: .72rem;
+    }
+
+    .socials {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .socials a {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #333;
+      color: #ddd;
+      font-size: .65rem;
+      transition: .25s ease;
+    }
+
+    .socials a:hover {
+      background: var(--green-primary);
+    }
+
+    .footer-col h3 {
+      margin-bottom: 15px;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: .92rem;
+      font-weight: 900;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,.65);
+      font-size: .72rem;
+      transition: .2s ease;
+    }
+
+    .footer-links a::before {
+      content: "•";
+      color: var(--gold);
+      margin-right: 7px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 9px;
+    }
+
+    .contact-item {
+      color: rgba(255,255,255,.65);
+      font-size: .72rem;
+    }
+
+    .copyright {
+      padding: 10px 20px;
+      background: #090909;
+      color: rgba(255,255,255,.55);
+      text-align: center;
+      font-size: .62rem;
+    }
+
+    /* =========================
+       ANIMATION
+    ========================== */
+    .reveal {
+      animation: blurIn .7s ease both;
+    }
+
+    @keyframes blurIn {
+      0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(15px);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+      }
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+    @media (max-width: 990px) {
+      .desktop-nav,
+      .header-cta {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-wrap {
+        position: relative;
+      }
+
+      .mobile-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        gap: 1rem;
+        background: var(--cream);
+        border-bottom: 2px solid #e8e0d5;
+        box-shadow: 0 10px 20px rgba(0,0,0,.08);
+      }
+
+      .mobile-nav a {
+        color: var(--green-deep);
+        font-size: .84rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+      }
+
+      .mobile-nav .mobile-cta {
+        padding: 11px 18px;
+        border-radius: 50px;
+        background: var(--green-primary);
+        color: #fff;
+        text-align: center;
+      }
+
+      .nav-toggle:checked ~ .mobile-nav {
+        display: flex;
+      }
+
+      .hero-inner,
+      .story-grid,
+      .approach-wrap,
+      .expert-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        text-align: center;
+        margin: auto;
+      }
+
+      .hero-copy p {
+        margin-inline: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        min-height: 320px;
+      }
+
+      .mission-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .story-image {
+        min-height: 360px;
+      }
+
+      .story-image img {
+        min-height: 360px;
+      }
+
+      .newsletter-inner,
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .section {
+        padding: 52px 20px;
+      }
+
+      .about-hero {
+        min-height: auto;
+        padding: 55px 20px;
+      }
+
+      .hero-copy h1 {
+        font-size: 2.25rem;
+      }
+
+      .hero-copy p {
+        font-size: .87rem;
+      }
+
+      .hero-visual {
+        min-height: 280px;
+      }
+
+      .orbit {
+        width: 260px;
+        height: 260px;
+      }
+
+      .energy-card {
+        width: min(100%, 315px);
+      }
+
+      .story-points,
+      .expert-list {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-intro {
+        padding: 25px 20px;
+      }
+
+      .step {
+        grid-template-columns: 45px 1fr;
+      }
+
+      .step-number {
+        width: 42px;
+        height: 42px;
+      }
+
+      .expert-card {
+        padding: 18px;
+      }
+
+      .expert-photo,
+      .expert-photo img {
+        min-height: 300px;
+      }
+
+      .cta-box {
+        padding: 38px 22px;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form button {
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        width: min(100% - 30px, var(--container));
+      }
+
+      .nav-wrap {
+        padding: 9px 15px;
+      }
+
+      .brand-name {
+        font-size: 1rem;
+      }
+
+      .brand-tag {
+        font-size: .55rem;
+      }
+
+      .hero-copy h1 {
+        font-size: 2rem;
+      }
+
+      .hero-actions a {
+        width: 100%;
+      }
+
+      .story-image,
+      .story-image img {
+        min-height: 300px;
+      }
+
+      .footer-main {
+        padding-inline: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-accent"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Divine Essence Home">
+        <div class="brand-mark">✦</div>
+        <div>
+          <div class="brand-name">DIVINE ESSENCE</div>
+          <div class="brand-tag">Vastu • Cosmic Timings • Guidance</div>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="courses.html">Courses</a>
+        <a href="blog.html">Blog</a>
+        <a href="videos.html">Videos</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Login</a>
+      </nav>
+
+      <a class="header-cta" href="consultation.html">Contact Now</a>
+
+      <label class="hamburger" for="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="courses.html">Courses</a>
+        <a href="blog.html">Blog</a>
+        <a href="videos.html">Videos</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Login</a>
+        <a class="mobile-cta" href="consultation.html">Contact Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="about-hero">
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <span class="hero-badge">About Divine Essence</span>
+          <h1>Creating Harmony Through <span>Vastu & Cosmic Wisdom</span></h1>
+          <p>
+            Divine Essence brings together Vastu principles, cosmic timing and practical guidance
+            to help people create more balanced, purposeful and positive spaces and routines.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="consultation.html">Book Your Consultation</a>
+            <a class="gold-btn" href="#our-story">Discover Our Story</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="orbit"></div>
+          <div class="energy-card reveal">
+            <div class="energy-icon">☯</div>
+            <h3>Align Your Energy</h3>
+            <p>
+              Explore thoughtful Vastu guidance and cosmic timing concepts designed
+              around your individual needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section story-section" id="our-story">
+      <div class="container story-grid">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=900&q=85"
+            alt="Peaceful spiritual consultation space"
+          >
+        </div>
+
+        <div class="story-content">
+          <span class="eyebrow">Our Story</span>
+          <h2>A Thoughtful Approach To Balance, Space & Timing</h2>
+          <p>
+            Divine Essence is built around the belief that the spaces we live and work in
+            can influence how we experience our everyday environment.
+          </p>
+          <p>
+            Our approach combines traditional Vastu concepts with a modern, easy-to-understand
+            consultation experience. Instead of making the process complicated, we focus on
+            practical observations, clear guidance and solutions that can be understood and applied.
+          </p>
+          <p>
+            From Vastu consultation and cosmic timing guidance to educational sessions,
+            the goal is to help individuals understand their environment and make more conscious choices.
+          </p>
+
+          <div class="story-points">
+            <div class="story-point">
+              <strong>Personal Guidance</strong>
+              <span>Recommendations are explained around the individual's situation and requirements.</span>
+            </div>
+            <div class="story-point">
+              <strong>Practical Perspective</strong>
+              <span>Traditional concepts are presented in a clear and approachable format.</span>
+            </div>
+            <div class="story-point">
+              <strong>Vastu Focus</strong>
+              <span>Explore directions, placement, energy balance and space-conscious decisions.</span>
+            </div>
+            <div class="story-point">
+              <strong>Learning & Growth</strong>
+              <span>Consultations, workshops and courses encourage deeper understanding.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION / VISION / VALUES -->
+    <section class="section mission-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What We Stand For</span>
+          <h2>Our Mission, Vision & Values</h2>
+          <p>
+            A calm and premium experience built around clarity, thoughtful guidance and meaningful learning.
+          </p>
+        </div>
+
+        <div class="mission-grid">
+          <article class="mission-card">
+            <div class="mission-icon">✦</div>
+            <h3>Our Mission</h3>
+            <p>
+              To make Vastu and cosmic guidance easier to understand, practical to explore,
+              and relevant to everyday decisions.
+            </p>
+          </article>
+
+          <article class="mission-card">
+            <div class="mission-icon">◉</div>
+            <h3>Our Vision</h3>
+            <p>
+              To create a trusted space where people can learn about energy, environment,
+              timing and balance with confidence.
+            </p>
+          </article>
+
+          <article class="mission-card">
+            <div class="mission-icon">✧</div>
+            <h3>Our Values</h3>
+            <p>
+              Clarity, respect, personalised attention, continuous learning and a calm,
+              professional consultation experience.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="section approach-section">
+      <div class="container approach-wrap">
+        <div class="approach-intro">
+          <span class="eyebrow">Our Approach</span>
+          <h2>Guidance That Starts With Understanding</h2>
+          <p>
+            Every consultation begins by understanding the context, the concern and the
+            desired outcome before moving toward practical recommendations.
+          </p>
+          <span class="approach-badge">Simple • Personal • Practical</span>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div>
+              <h3>Understand Your Requirement</h3>
+              <p>We begin with your concern, goals, space or situation.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">02</div>
+            <div>
+              <h3>Study The Relevant Factors</h3>
+              <p>Relevant Vastu, placement and timing considerations are reviewed.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">03</div>
+            <div>
+              <h3>Explain The Guidance</h3>
+              <p>Key observations are presented in a clear and understandable manner.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">04</div>
+            <div>
+              <h3>Recommend Practical Steps</h3>
+              <p>We focus on realistic changes and remedies that fit the situation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERT -->
+    <section class="section expert-section">
+      <div class="container">
+        <div class="expert-card">
+          <div class="expert-photo">
+            <img
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85"
+              alt="Professional consultation and guidance"
+            >
+          </div>
+
+          <div class="expert-content">
+            <span class="eyebrow">Our Guidance</span>
+            <h2>Learn With Dr. Deepshikha Varun</h2>
+            <p>
+              Divine Essence features guidance around Vastu, cosmic timings and practical
+              approaches to creating greater harmony in personal and professional environments.
+            </p>
+            <p>
+              Through consultations, live learning sessions and educational content,
+              the focus remains on helping people understand the principles and apply them thoughtfully.
+            </p>
+
+            <ul class="expert-list">
+              <li>Vastu Consultation</li>
+              <li>Cosmic Timing Guidance</li>
+              <li>Educational Workshops</li>
+              <li>Live Interactive Sessions</li>
+            </ul>
+
+            <a class="primary-btn" href="consultation.html">Book A Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section why-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why Divine Essence</span>
+          <h2>A Calm, Clear & Personal Experience</h2>
+          <p>
+            We bring together a premium visual experience and an approachable way of learning and consulting.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card">
+            <div class="why-icon">✦</div>
+            <h3>Personal Attention</h3>
+            <p>Guidance is shaped around individual questions and requirements.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">◈</div>
+            <h3>Clear Explanation</h3>
+            <p>Complex concepts are communicated in a simple and structured way.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">☼</div>
+            <h3>Holistic Perspective</h3>
+            <p>Space, timing, habits and intentions are considered together.</p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-icon">✧</div>
+            <h3>Learning Focus</h3>
+            <p>Workshops and sessions encourage understanding rather than confusion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta">
+      <div class="cta-box">
+        <span class="eyebrow">Start Your Journey</span>
+        <h2>Ready To Bring More Balance Into Your Space?</h2>
+        <p>
+          Connect with Divine Essence for a consultation or explore our learning sessions
+          to understand Vastu and cosmic timing in a more practical way.
+        </p>
+        <a class="gold-btn" href="consultation.html">Book Your Consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <section class="newsletter">
+      <div class="newsletter-inner">
+        <div>
+          <h2>Our Newsletter</h2>
+          <p>Get useful Vastu, cosmic timing and guidance updates directly in your inbox.</p>
+        </div>
+
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" placeholder="Enter Your Email Here" aria-label="Email address" required>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <div class="brand-mark">✦</div>
+          <div>
+            <div class="brand-name">DIVINE ESSENCE</div>
+            <div class="brand-tag">Vastu • Cosmic Timings • Guidance</div>
+          </div>
+        </a>
+
+        <p>
+          Explore practical Vastu guidance, cosmic timing concepts and educational resources
+          designed to help you create a more balanced environment.
+        </p>
+
+        <div class="socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="consultation.html">Consultation</a>
+          <a href="courses.html">Courses</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <div class="contact-list">
+          <div class="contact-item">📍 Gotham Hall, 1356 Broadway, NY 10018, California, USA</div>
+          <div class="contact-item">✉ astrology@example.com</div>
+          <div class="contact-item">☎ +(91) 1800-124-105</div>
+          <div class="contact-item">☎ +(91) 1800-326-324</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      Copyright © 2026 Divine Essence. All Right Reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Close mobile menu after selecting a page.
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+  </script>
+
+</body>
+</html>

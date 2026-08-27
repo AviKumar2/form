@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Vastu Consultancy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+        :root {
+            --primary-green: #3b5336;
+            --light-green-bg: #eaf0e6;
+            --accent-gold: #d4af37;
+            --text-dark: #2c3e2b;
+            --text-muted: #556b53;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fcfbf7;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Header Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo-area {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-green);
+        }
+
+        .cta-btn {
+            background-color: #27ae60;
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #219653;
+        }
+
+        /* About Hero Banner */
+        .about-hero {
+            background: linear-gradient(135deg, var(--light-green-bg) 0%, #f7f9f5 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .about-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Main About Content Grid */
+        .about-main {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(59, 83, 54, 0.15);
+            display: block;
+        }
+
+        .badge-box {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .badge-box h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-green);
+            font-size: 1.2rem;
+        }
+
+        .badge-box p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .feature-list li span {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+
+        /* Values Section */
+        .values-section {
+            background-color: var(--white);
+            padding: 80px 20px;
+        }
+
+        .values-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            background: var(--light-green-bg);
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Layout Adjustments */
+        @media (max-width: 768px) {
+            .about-main {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+            .badge-box {
+                right: 10px;
+                bottom: -15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <span>DIVINE ESSENCE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#" class="active">ABOUT US</a></li>
+                <li><a href="#">CONSULTATION</a></li>
+                <li><a href="#">COURSES</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <a href="#" class="cta-btn">Contact Now</a>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <h1>About Our Practice</h1>
+        <p>Aligning structural and spatial energies with cosmic principles to invite abundance, stability, and holistic success into your life.</p>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="about-main">
+        <div class="about-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Vastu Consultant">
+            <div class="badge-box">
+                <h4>Expert Guidance</h4>
+                <p>Traditional & Modern Vastu</p>
+            </div>
+        </div>
+        <div class="about-text">
+            <h2>Transforming Spaces Into Centers of Prosperity & Peace</h2>
+            <p>
+                Welcome to our professional practice, where ancient spatial science meets contemporary architectural needs. We specialize in diagnosing and adjusting environmental energy flows without requiring structural demolition.
+            </p>
+            <p>
+                Our philosophy centers on optimizing natural elements to clear blocks, eliminate stagnation, and effortlessly draw growth and high-value opportunities into residential and commercial spaces.
+            </p>
+            <ul class="feature-list">
+                <li><span>✔</span> Non-demolition Vastu remedies and adjustments</li>
+                <li><span>✔</span> Tailored solutions for residential homes and corporate offices</li>
+                <li><span>✔</span> Specialized directional and elemental spatial alignment</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Values & Mission Section -->
+    <section class="values-section">
+        <div class="values-container">
+            <div class="value-card">
+                <h3>Our Mission</h3>
+                <p>To demystify Vastu Shastra and provide practical, result-driven scientific corrections that promote peace, wellness, and financial growth.</p>
+            </div>
+            <div class="value-card">
+                <h3>Our Approach</h3>
+                <p>We analyze zoning, elemental placements, and subtle spatial cues to craft an energy blueprint tailored to your layout and goals.</p>
+            </div>
+            <div class="value-card">
+                <h3>Why Trust Us</h3>
+                <p>Combining rigorous analysis with profound respect for traditional canons, our guidance is engineered to deliver clarity and measurable relief.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
