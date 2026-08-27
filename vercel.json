@@ -3,6 +3,10 @@
     {
       "source": "/",
       "destination": "/form.html"
+    },
+    {
+      "source": "/form2",
+      "destination": "/form-details/kedarnath.html"
     }
   ]
 }
